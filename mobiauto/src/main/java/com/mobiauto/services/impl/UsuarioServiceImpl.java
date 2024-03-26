@@ -2,8 +2,10 @@ package com.mobiauto.services.impl;
 
 import com.mobiauto.dto.UsuarioDTO;
 import com.mobiauto.dto.UsuarioInsertDto;
+import com.mobiauto.entites.Revenda;
 import com.mobiauto.entites.Usuario;
 import com.mobiauto.entites.enums.Cargo;
+import com.mobiauto.repositories.RevendaRepository;
 import com.mobiauto.repositories.UsuarioRepository;
 import com.mobiauto.services.UsuarioServiceInterface;
 import com.mobiauto.services.exceptions.DuplicatefieldException;
@@ -33,6 +35,8 @@ public class UsuarioServiceImpl implements UsuarioServiceInterface, UserDetailsS
     @Autowired
     private UsuarioRepository repository;
 
+    @Autowired private RevendaRepository revendaRepository;
+
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
@@ -61,6 +65,10 @@ public class UsuarioServiceImpl implements UsuarioServiceInterface, UserDetailsS
         usuario.setEmail(usuarioDTO.getEmail());
         usuario.setSenha(passwordEncoder.encode(usuarioDTO.getSenha()));
 
+        Revenda revenda = revendaRepository.findById(usuarioDTO.getRevendaId())
+                .orElseThrow(() -> new ResourceNotFoundExceptions("Revenda não encontrada com o ID: " + usuarioDTO.getRevendaId()));
+        usuario.setRevenda(revenda);
+
         Set<Cargo> cargos = new HashSet<>();
         usuarioDTO.getCargo().forEach(cargoDescricao -> {
             Cargo cargo = Cargo.fromDescricao(cargoDescricao);
@@ -70,6 +78,8 @@ public class UsuarioServiceImpl implements UsuarioServiceInterface, UserDetailsS
 
         return new UsuarioDTO(repository.save(usuario));
     }
+
+
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {

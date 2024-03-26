@@ -33,9 +33,9 @@ public class Usuario implements UserDetails, Serializable {
 
     private String senha;
 
-//    @ManyToOne//varios usuarios tem uma revenda
-//    @JoinColumn(name = "revenda_id")
-//    private Revenda revenda;
+    @ManyToOne//varios usuarios tem uma revenda
+    @JoinColumn(name = "revenda_id")
+    private Revenda revenda;
 
     // Mapeamento do cargo para a tabela tb_usuario_cargo
     @ElementCollection(fetch = FetchType.EAGER)

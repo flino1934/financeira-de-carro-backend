@@ -24,4 +24,6 @@ public class UsuarioInsertDto extends UsuarioDTO{
     @Size(min = 6,max = 20, message = "A senha deve ter de 6 a 20 caracteres")
     private String senha;
 
+    private Long revendaId;
+
 }

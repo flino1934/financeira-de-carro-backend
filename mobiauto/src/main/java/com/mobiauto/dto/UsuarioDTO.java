@@ -1,5 +1,6 @@
 package com.mobiauto.dto;
 
+import com.mobiauto.entites.Revenda;
 import com.mobiauto.entites.Usuario;
 import com.mobiauto.entites.enums.Cargo;
 import lombok.AllArgsConstructor;
@@ -29,13 +30,16 @@ public class UsuarioDTO implements Serializable {
     @Email(message = "Informar email valido")
     private String email;
 
+    private Long revendaId;
+
     private Set<String> cargo = new HashSet();
+
 
     public UsuarioDTO(Usuario entity) {
         this.id = entity.getId();
         this.nome = entity.getNome();
         this.email = entity.getEmail();
-
+        this.revendaId = entity.getRevenda() != null ? entity.getRevenda().getId() : null; // Define o ID da revenda se ela não for nula
         entity.getCargo().forEach(cargo -> this.cargo.add(cargo.getDescricao()));
     }
 }
