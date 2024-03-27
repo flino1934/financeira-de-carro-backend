@@ -1,6 +1,5 @@
 package com.mobiauto.repositories;
 
-import com.mobiauto.entites.Revenda;
 import com.mobiauto.entites.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

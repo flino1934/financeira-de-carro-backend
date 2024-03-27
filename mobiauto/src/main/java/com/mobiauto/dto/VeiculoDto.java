@@ -1,5 +1,6 @@
 package com.mobiauto.dto;
 
+import com.mobiauto.entites.Veiculo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,5 +23,12 @@ public class VeiculoDto implements Serializable {
     @NotBlank(message = "Campo obrigatório")
     private String versao;
     @NotBlank(message = "Campo obrigatório")
-    private Instant anoModelo;
+    private Integer anoModelo;
+
+    public VeiculoDto(Veiculo entity) {
+        this.marca = entity.getMarca();
+        this.modelo = entity.getModelo();
+        this.versao = entity.getVersao();
+        this.anoModelo = entity.getAnoModelo();
+    }
 }

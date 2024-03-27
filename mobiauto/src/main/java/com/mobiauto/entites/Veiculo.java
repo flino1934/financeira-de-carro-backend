@@ -12,7 +12,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tb_veiculo")
+@Table(name = "tb_veiculos")
 public class Veiculo implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -24,7 +24,6 @@ public class Veiculo implements Serializable {
     private String modelo;
     private String versao;
 
-    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-    private Instant anoModelo;
+    private Integer anoModelo;
 
 }
