@@ -23,7 +23,6 @@ public class Veiculo implements Serializable {
     private String marca;
     private String modelo;
     private String versao;
-
     private Integer anoModelo;
 
 }

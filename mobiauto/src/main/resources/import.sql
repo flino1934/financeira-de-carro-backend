@@ -11,9 +11,10 @@ INSERT INTO tb_usuario_cargo (usuario_id, cargo) VALUES (2,'PROPRIETARIO');
 INSERT INTO tb_usuario (nome, email, senha,revenda_id) VALUES ('Charlote', 'mi@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG',1);
 INSERT INTO tb_usuario_cargo (usuario_id, cargo) VALUES (3,'ASSISTENTE');
 
---Inserindo na tabela de carro
+--Inserindo na tabela de veiculos
 
-INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('chevrolet','Astra','Hatch',2008);
+INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('C
+hevrolet','Astra','Hatch',2008);
 INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('Kawazaki','Z400','Naked',2024);
 INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('Honda','Lead','Scooter',2014);
 INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('Yamaha','Crosser','Motocicleta',2016);
