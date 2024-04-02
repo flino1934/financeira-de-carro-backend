@@ -34,7 +34,6 @@ public class UsuarioDTO implements Serializable {
 
     private Set<String> cargo = new HashSet();
 
-
     public UsuarioDTO(Usuario entity) {
         this.id = entity.getId();
         this.nome = entity.getNome();

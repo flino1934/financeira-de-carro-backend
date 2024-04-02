@@ -13,9 +13,13 @@ INSERT INTO tb_usuario_cargo (usuario_id, cargo) VALUES (3,'ASSISTENTE');
 
 --Inserindo na tabela de veiculos
 
-INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('C
-hevrolet','Astra','Hatch',2008);
+INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('Chevrolet','Astra','Hatch',2008);
 INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('Kawazaki','Z400','Naked',2024);
 INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('Honda','Lead','Scooter',2014);
 INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('Yamaha','Crosser','Motocicleta',2016);
+
+--Inserindo na tabela de clientes
+
+INSERT INTO tb_clientes (nome,email,telefone) VALUES ('Felipe Lino','f.lino1934@gmail.com','(13) 98137-5682');
+INSERT INTO tb_clientes (nome,email,telefone) VALUES ('Michaelly Lino','midi@gmail.com','(13) 98137-5682');
 
