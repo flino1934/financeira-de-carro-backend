@@ -22,12 +22,13 @@ public class Oportunidades implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Status status;
     private String motivoConclusao;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant dataAtribuicao;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant dataConclusao;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     @ManyToOne
     private Cliente cliente;

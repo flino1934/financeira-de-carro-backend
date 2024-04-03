@@ -23,3 +23,7 @@ INSERT INTO tb_veiculos (marca,modelo,versao,ano_modelo) VALUES ('Yamaha','Cross
 INSERT INTO tb_clientes (nome,email,telefone) VALUES ('Felipe Lino','f.lino1934@gmail.com','(13) 98137-5682');
 INSERT INTO tb_clientes (nome,email,telefone) VALUES ('Michaelly Lino','midi@gmail.com','(13) 98137-5682');
 
+--Inserindo na tabela de oportunidades
+
+INSERT INTO tb_oportunidades (data_atribuicao, data_conclusao, motivo_conclusao, status, cliente_id, veiculo_id) VALUES(TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z','ABCD','NOVO',1,1);
+
