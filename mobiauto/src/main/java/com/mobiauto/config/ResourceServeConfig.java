@@ -26,7 +26,7 @@ public class ResourceServeConfig extends ResourceServerConfigurerAdapter {
     private Environment env;
 
     private static final String[] ADMIN = {"/usuarios/**"};
-    private static final String[] PROPRIETARIO_GERENTE_ADMIN = {"/usuarios/**", "/revendas/**","/veiculos/**","/clientes/**"};
+    private static final String[] PROPRIETARIO_GERENTE_ADMIN = {"/usuarios/**", "/revendas/**","/veiculos/**","/clientes/**","/oportunidades/**"};
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
