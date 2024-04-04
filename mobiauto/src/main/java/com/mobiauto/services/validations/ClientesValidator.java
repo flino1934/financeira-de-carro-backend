@@ -2,9 +2,7 @@ package com.mobiauto.services.validations;
 
 import com.mobiauto.controllers.exceptions.FieldMessage;
 import com.mobiauto.dto.ClienteDTO;
-import com.mobiauto.dto.UsuarioInsertDto;
 import com.mobiauto.repositories.ClienteRepository;
-import com.mobiauto.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.ConstraintValidator;

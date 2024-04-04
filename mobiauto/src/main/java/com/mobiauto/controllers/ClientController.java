@@ -1,7 +1,6 @@
 package com.mobiauto.controllers;
 
 import com.mobiauto.dto.ClienteDTO;
-import com.mobiauto.dto.RevendaDTO;
 import com.mobiauto.services.ClienteServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

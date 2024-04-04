@@ -1,11 +1,8 @@
 package com.mobiauto.services.impl;
 
-import com.mobiauto.dto.ClienteDTO;
 import com.mobiauto.dto.OportunidadesDTO;
-import com.mobiauto.dto.RevendaDTO;
 import com.mobiauto.entites.Cliente;
 import com.mobiauto.entites.Oportunidades;
-import com.mobiauto.entites.Revenda;
 import com.mobiauto.entites.Veiculo;
 import com.mobiauto.repositories.ClienteRepository;
 import com.mobiauto.repositories.OportunidadeRepository;

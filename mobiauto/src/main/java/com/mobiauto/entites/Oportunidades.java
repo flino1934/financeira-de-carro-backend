@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.Date;
 
 @Data
 @AllArgsConstructor

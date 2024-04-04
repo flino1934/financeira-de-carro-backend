@@ -1,6 +1,5 @@
 package com.mobiauto.controllers;
 
-import com.mobiauto.dto.RevendaDTO;
 import com.mobiauto.dto.UsuarioDTO;
 import com.mobiauto.dto.UsuarioInsertDto;
 import com.mobiauto.services.UsuarioServiceInterface;

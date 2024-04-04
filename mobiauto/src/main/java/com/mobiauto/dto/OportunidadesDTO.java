@@ -1,14 +1,11 @@
 package com.mobiauto.dto;
 
-import com.mobiauto.entites.Cliente;
 import com.mobiauto.entites.Oportunidades;
-import com.mobiauto.entites.Veiculo;
 import com.mobiauto.entites.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
 

@@ -8,8 +8,6 @@ import com.mobiauto.entites.enums.Cargo;
 import com.mobiauto.repositories.RevendaRepository;
 import com.mobiauto.repositories.UsuarioRepository;
 import com.mobiauto.services.UsuarioServiceInterface;
-import com.mobiauto.services.exceptions.DuplicatefieldException;
-import com.mobiauto.services.exceptions.FormatInvalidException;
 import com.mobiauto.services.exceptions.ResourceNotFoundExceptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

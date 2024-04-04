@@ -1,11 +1,7 @@
 package com.mobiauto.controllers;
 
-import com.mobiauto.dto.RevendaDTO;
-import com.mobiauto.dto.UsuarioDTO;
-import com.mobiauto.dto.UsuarioInsertDto;
 import com.mobiauto.dto.VeiculoDto;
 import com.mobiauto.services.VeiculoServiceInterface;
-import com.mobiauto.services.impl.VeiculoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -38,7 +34,7 @@ public class VeiculoController {
     }
 
     @PostMapping
-    public ResponseEntity<VeiculoDto> insert(@Valid @RequestBody VeiculoDto dto){
+    public ResponseEntity<VeiculoDto> insert(@Valid @RequestBody VeiculoDto dto) {
 
 
         dto = service.insert(dto);

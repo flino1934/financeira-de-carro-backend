@@ -2,7 +2,6 @@ package com.mobiauto.services.validations;
 
 import com.mobiauto.controllers.exceptions.FieldMessage;
 import com.mobiauto.dto.UsuarioInsertDto;
-import com.mobiauto.entites.Usuario;
 import com.mobiauto.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
