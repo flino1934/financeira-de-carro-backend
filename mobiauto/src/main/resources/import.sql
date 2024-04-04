@@ -25,5 +25,6 @@ INSERT INTO tb_clientes (nome,email,telefone) VALUES ('Michaelly Lino','midi@gma
 
 --Inserindo na tabela de oportunidades
 
-INSERT INTO tb_oportunidades (data_atribuicao, data_conclusao, motivo_conclusao, status, cliente_id, veiculo_id) VALUES(TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z','ABCD','NOVO',1,1);
+INSERT INTO tb_oportunidades (data_atribuicao, data_conclusao, motivo_conclusao, status, cliente_id, veiculo_id) VALUES(TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2021-07-14T10:00:00Z','manutenção de freio','NOVO',1,1);
+INSERT INTO tb_oportunidades (data_atribuicao, data_conclusao, motivo_conclusao, status, cliente_id, veiculo_id) VALUES(TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2020-07-14T12:00:00Z','Troca de oléo','NOVO',1,1);
 

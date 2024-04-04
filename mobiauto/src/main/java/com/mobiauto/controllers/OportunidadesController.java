@@ -8,9 +8,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import javax.validation.Valid;
+import java.net.URI;
 
 @RequestMapping(value = "/oportunidades")
 @RestController
@@ -23,6 +25,27 @@ public class OportunidadesController {
     public ResponseEntity<Page<OportunidadesDTO>> findAll(Pageable pageable) {
         Page<OportunidadesDTO> list = service.findAllPaged(pageable);
         return ResponseEntity.ok().body(list);
+    }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<OportunidadesDTO> findById(@PathVariable long id) {
+
+        OportunidadesDTO dto = service.findById(id);
+        return ResponseEntity.ok().body(dto);
+
+    }
+
+    @PostMapping
+    public ResponseEntity<OportunidadesDTO> insert(@Valid @RequestBody OportunidadesDTO dto) {
+
+
+        dto = service.insert(dto);
+        URI uri = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}").buildAndExpand(dto.getId()).toUri();
+
+        return ResponseEntity.created(uri).body(dto);
+
     }
 
 

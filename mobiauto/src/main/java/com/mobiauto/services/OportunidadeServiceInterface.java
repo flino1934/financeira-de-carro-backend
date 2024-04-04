@@ -15,6 +15,6 @@ public interface OportunidadeServiceInterface {
 
     OportunidadesDTO findById(long id);
 
-    OportunidadesDTO insert(ClienteDTO ClienteDTO);
+    OportunidadesDTO insert(OportunidadesDTO dto);
 }
 

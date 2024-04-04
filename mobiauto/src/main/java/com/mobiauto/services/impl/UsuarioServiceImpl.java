@@ -35,7 +35,8 @@ public class UsuarioServiceImpl implements UsuarioServiceInterface, UserDetailsS
     @Autowired
     private UsuarioRepository repository;
 
-    @Autowired private RevendaRepository revendaRepository;
+    @Autowired
+    private RevendaRepository revendaRepository;
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
