@@ -34,4 +34,12 @@ public class Revenda implements Serializable {
     @NotEmpty(message = "Campo obrigatório")
     private String nomeSocial;
 
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
+    @OneToOne
+    @JoinColumn(name = "veiculo_id")
+    private Veiculo veiculo;
+
 }
